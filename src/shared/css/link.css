@@ -1,0 +1,33 @@
+.link-text,
+.link-text:visited,
+.link-text:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+.link-text:hover,
+.link-text:focus {
+  text-decoration: underline;
+}
+
+.link-text_dark,
+.link-text_dark:visited,
+.link-text_dark:hover {
+  color: var(--color-darkest);
+}
+
+.link-text_accent,
+.link-text_accent:visited,
+.link-text_accent:hover {
+  color: var(--accent);
+}
+
+.link-text_underlined,
+.link-text_underlined:visited {
+  text-decoration: underline;
+}
+
+.link-icon {
+  display: inline-block;
+  text-decoration: none;
+}

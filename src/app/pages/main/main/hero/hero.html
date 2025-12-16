@@ -1,0 +1,44 @@
+<section class="hero" id="hero">
+  <div class="hero__info">
+    <h1 class="hero__title">{{ title | uppercase }}</h1>
+    <p class="hero__subtitle no-margine">
+      @for (sport of sports; track sport; let last = $last) {
+        <span class="hero__sport"
+          >{{ sport | uppercase }}
+          @if (last === false) {
+            <span class="hero__delimiter">|</span>
+          }
+        </span>
+      }
+    </p>
+    <a href="./sign-up" class="button button_light block mt-big">Записаться</a>
+  </div>
+  <picture class="hero__media">
+    <source
+      media="(max-width: 1280px) and (min-width: 880px)"
+      type="image/webp"
+      srcset="/images/pages/main/hero-1-1.webp"
+    />
+    <source
+      media="(max-width: 1280px) and (min-width: 880px)"
+      type="image/jpeg"
+      srcset="/images/pages/main/hero-1-1.jpg"
+    />
+    <source
+      media="(min-width: 1281px)"
+      type="image/webp"
+      srcset="/images/pages/main/hero-horizontal.webp"
+    />
+    <img
+      class="hero__img"
+      alt="Фотография тренировки в Коробке спорта."
+      src="/images/pages/main/hero-horizontal.jpg"
+    />
+  </picture>
+  <img
+    src="/images/decor/bg-dekor.svg"
+    class="hero__decor"
+    alt=""
+    aria-hidden="true"
+  />
+</section>

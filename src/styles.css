@@ -1,1 +1,62 @@
 /* You can add global styles to this file, and also import other style files */
+@import "./shared/css/fonts.css";
+@import "./shared/css/variables.css";
+
+.html {
+  font-size: 16px;
+  scroll-padding-top: var(--header-height);
+}
+
+@media (max-width: 768px) {
+  .html {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .html {
+    font-size: 16px;
+  }
+}
+
+.list-seo {
+  list-style-type: none;
+  list-style-position: outside;
+  padding: 0;
+}
+
+.no-margin {
+  margin: 0;
+}
+
+.mt {
+  margin-top: 1rem;
+}
+
+.mt-big {
+  margin-top: 2rem;
+}
+
+.mb {
+  margin-bottom: 1rem;
+}
+
+.mb-big {
+  margin-bottom: 2rem;
+}
+
+.ml {
+  margin-left: 1rem;
+}
+
+.ml-big {
+  margin-left: 3rem;
+}
+
+.mr {
+  margin-right: 1rem;
+}
+
+.mr-big {
+  margin-right: 3rem;
+}

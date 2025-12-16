@@ -1,0 +1,50 @@
+.button {
+  box-shadow: none;
+  box-sizing: border-box;
+  padding: 0.5rem 2rem;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 16px;
+  text-decoration: none;
+  text-align: center;
+  display: inline-block;
+  width: fit-content;
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+.button_light {
+  background-color: var(--color-lightest);
+  color: var(--color-accent);
+  border: none;
+}
+
+.button_accent {
+  color: var(--color-lightest);
+  background-color: var(--color-accent);
+  border: none;
+}
+
+.button_accent:hover,
+.button_regular:hover {
+  color: var(--color-lightest);
+  background-color: var(--accent-dark);
+}
+
+.button:disabled {
+  opacity: 0.85;
+  cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+  .button {
+    padding: 12px;
+  }
+
+  .button_full-wide-mobile {
+    width: 100%;
+    padding: 16px;
+  }
+}

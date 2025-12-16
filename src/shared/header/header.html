@@ -1,0 +1,38 @@
+<app-logo></app-logo>
+<a class="link-text sr-only sr-only-focusable" href="#main"
+  >Перейти к контенту</a
+>
+<details class="menu" [open]="isMenuOpen">
+  <summary class="menu__summary">Меню</summary>
+  <nav
+    aria-label="Primary"
+    itemscope=""
+    itemtype="https://schema.org/SiteNavigationElement"
+    class="menu__content"
+  >
+    <ul
+      class="list-seo no-margin nav"
+      itemprop="about"
+      itemscope=""
+      itemtype="https://schema.org/ItemList"
+    >
+      @for (section of nav; track section.anchor) {
+        <li
+          class="mt mb"
+          itemprop="itemListElement"
+          itemscope=""
+          itemtype="https://schema.org/ItemList"
+        >
+          <a href="/#{{ section.anchor }}" class="link-text" itemprop="url">
+            {{ section.name }}
+          </a>
+          <meta itemprop="name" content="{{ section.name }}" />
+        </li>
+      }
+    </ul>
+    <div class="menu__block">
+      <app-social-media theme="accent"></app-social-media>
+      <a href="./sign-up" class="button button_accent">Записаться</a>
+    </div>
+  </nav>
+</details>

@@ -1,0 +1,7 @@
+:host {
+  align-self: center;
+}
+.contacts {
+  display: flex;
+  gap: 10px;
+}

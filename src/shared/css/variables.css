@@ -1,0 +1,15 @@
+.body {
+  --color-accent: rgba(254, 83, 135, 1);
+  --color-lightest: rgba(255, 254, 254, 1);
+  --color-darkest: rgba(21, 24, 36, 1);
+  --color-bg-light: rgba(255, 233, 228, 1);
+  --padding-horisontal: 5%;
+  --padding-vertical: 5%;
+  --header-height: 69px;
+}
+@media (max-width: 1680px) {
+  .body {
+    --padding-horisontal: 2rem;
+    --padding-vertical: 2rem;
+  }
+}
