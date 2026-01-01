@@ -9,18 +9,14 @@ import { DOCUMENT } from '@angular/common';
 
 import { Logo } from '../logo/logo';
 import { SocialMedia } from '../social-media/social-media';
+import { CTA } from '../cta/cta';
 import { appURL } from '../constants';
 
 @Component({
   selector: 'app-header',
-  imports: [Logo, SocialMedia],
+  imports: [Logo, SocialMedia, CTA],
   templateUrl: './header.html',
-  styleUrls: [
-    './header.css',
-    '../css/link.css',
-    '../css/screen-readers.css',
-    '../css/button.css',
-  ],
+  styleUrls: ['./header.css', '../css/link.css', '../css/screen-readers.css'],
 })
 export class Header implements OnInit {
   private renderer2 = inject(Renderer2);

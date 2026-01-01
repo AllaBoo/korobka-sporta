@@ -6,3 +6,8 @@ export interface IEvent {
   CTA: string;
   date: string;
 }
+export interface ICTA {
+  text: string;
+  link: string;
+  label: string;
+}
