@@ -1,0 +1,37 @@
+@if (event) {
+  <div class="card" itemscope itemtype="http://schema.org/Event">
+    <a href="{{ event.link }}" target="_blank">
+      <img
+        class="card__image"
+        [src]="event.image"
+        [alt]="'Фотографии мероприятия ' + event.name + '.'"
+      />
+    </a>
+    <figure class="card__date">
+      <img
+        src="/images/icons/calendar-white.svg"
+        width="12"
+        height="12"
+        alt=""
+        aria-hidden="true"
+      />
+      <figcaption>
+        <time itemprop="startDate" [attr.datetime]="event.date">
+          {{ event.date }}
+        </time>
+      </figcaption>
+    </figure>
+    <div class="card__content">
+      <h3 class="card__title trankate" itemprop="name">{{ event.name }}</h3>
+      <p class="card__description trankate" itemprop="description">
+        {{ event.description }}
+      </p>
+      <a
+        href="{{ event.link }}"
+        target="_blank"
+        class="button button_accent button_full-wide card__cta"
+        >{{ event.CTA }}</a
+      >
+    </div>
+  </div>
+}

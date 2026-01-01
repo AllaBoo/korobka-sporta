@@ -9,7 +9,13 @@
 }
 @media (max-width: 1680px) {
   .body {
-    --padding-horisontal: 2rem;
-    --padding-vertical: 2rem;
+    --padding-horisontal: 40px;
+    --padding-vertical: 40px;
+  }
+}
+@media (max-width: 576px) {
+  .body {
+    --padding-horisontal: 20px;
+    --padding-vertical: 20px;
   }
 }

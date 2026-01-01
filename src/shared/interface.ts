@@ -1,4 +1,8 @@
-export interface IButton {
-    class: string;
-    disabled: boolean;
-  }
+export interface IEvent {
+  name: string;
+  description: string;
+  image: string;
+  link: string;
+  CTA: string;
+  date: string;
+}

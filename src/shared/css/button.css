@@ -9,10 +9,12 @@
   text-align: center;
   display: inline-block;
   width: fit-content;
+  font-family: Tilda Sans;
 }
 
 .button:hover {
   cursor: pointer;
+  opacity: 0.9;
 }
 
 .button_light {
@@ -27,17 +29,13 @@
   border: none;
 }
 
-.button_accent:hover,
-.button_regular:hover {
-  color: var(--color-lightest);
-  background-color: var(--accent-dark);
-}
-
 .button:disabled {
   opacity: 0.85;
   cursor: not-allowed;
 }
-
+.button_full-wide {
+  width: 100%;
+}
 @media (max-width: 768px) {
   .button {
     padding: 12px;

@@ -67,7 +67,6 @@ export class Header implements OnInit {
     `;
 
     this.renderer2.appendChild(this.document.head, script);
-    console.log(this.document.documentElement.clientWidth);
   }
 
   @HostListener('window:resize')
