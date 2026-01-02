@@ -1,0 +1,173 @@
+.overview {
+  background-color: var(--color-bg-light);
+  box-sizing: border-box;
+  padding: var(--padding-vertical) var(--padding-horisontal);
+  position: relative;
+  background-image:
+    url("/images/decor/overview/box-top.svg"),
+    url("/images/decor/overview/kettlebell.svg"),
+    url("/images/decor/overview/dumbbell.svg"),
+    url("/images/decor/overview/donut-left.svg"),
+    url("/images/decor/overview/box-right.svg"),
+    url("/images/decor/overview/donut-right.svg");
+  background-size:
+    92px 92px,
+    57px 61px,
+    100px 120px,
+    126px 126px,
+    92px 92px,
+    74px 74px;
+  background-position:
+    25% -10px,
+    80% -8px,
+    102% 20%,
+    -20px 70%,
+    90% 35%,
+    50% 102%;
+  background-repeat: no-repeat;
+}
+.overview::before {
+  content: url("/images/decor/overview/donut-big.svg");
+  position: absolute;
+  bottom: -40px;
+  right: 0;
+  z-index: 2;
+}
+.overview__container {
+  background-color: var(--color-accent);
+  box-sizing: border-box;
+  padding: 48px 82px;
+  border-radius: 30px;
+  color: var(--color-lightest);
+  font-family: Tilda Sans VF;
+  width: 85%;
+  margin: 0 auto;
+  position: relative;
+  max-width: 900px;
+}
+.overview__container::before {
+  content: url("/images/decor/overview/box-bottom.svg");
+  position: absolute;
+  bottom: 0;
+  left: -116px;
+  width: 120px;
+  height: 120px;
+  z-index: 2;
+}
+.overview__container::after {
+  content: url("/images/decor/overview/dumbbell-left.svg");
+  position: absolute;
+  top: 50px;
+  left: -116px;
+  width: 120px;
+  height: 120px;
+  z-index: 2;
+}
+.overview__description {
+  font-family: Tilda Sans VF;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 130%;
+  text-align: center;
+  white-space: pre-wrap;
+  margin: 38px auto;
+}
+.overview__cta {
+  display: block;
+  margin: 0 auto;
+  width: fit-content;
+}
+@media (max-width: 1280px) {
+  .overview {
+    background-position:
+      25% -10px,
+      80% -8px,
+      102% 20%,
+      -20px 70%,
+      95% 35%,
+      50% 102%;
+  }
+  .overview::before {
+    bottom: 0;
+  }
+}
+@media (max-width: 992px) {
+  .overview__container {
+    padding: 32px 48px;
+  }
+  .overview__description {
+    font-size: 20px;
+    margin: 24px auto;
+  }
+  .overview::before {
+    bottom: -80px;
+    right: -17px;
+    transform: scale(0.8);
+  }
+  /* box-bottom */
+  .overview__container::before {
+    bottom: -40px;
+  }
+  /* dumbbell-left */
+  .overview__container::after {
+    top: -20px;
+  }
+}
+@media (max-width: 792px) {
+  .overview__container {
+    padding: 32px;
+  }
+  .overview__description {
+    font-size: 18px;
+  }
+  /* box-bottom dumbbell-left */
+  .overview__container::before,
+  .overview__container::after {
+    left: -90px;
+  }
+}
+@media (max-width: 640px) {
+  .overview__container {
+    width: 100%;
+    padding: 24px;
+  }
+  .overview__description {
+    font-size: 16px;
+  }
+  /* box-bottom dumbbell-left */
+  .overview__container::before,
+  .overview__container::after {
+    left: -70px;
+  }
+  .overview {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-position:
+      25% -20px,
+      80% -6px,
+      102% 20%,
+      -20px 70%,
+      90% 35%,
+      50% 102%;
+  }
+  /* box-bottom */
+  .overview__container::before {
+    bottom: 0;
+    left: 10px;
+  }
+}
+@media (max-width: 540px) {
+  /* donut-big */
+  .overview::before {
+    content: "";
+  }
+  /* dumbbell-left */
+  .overview__container::after {
+    content: "";
+  }
+  /* box-bottom */
+  .overview__container::before {
+    left: -50px;
+    bottom: -25px;
+  }
+}

@@ -8,7 +8,7 @@ import { Card } from '../../../../../../src/shared/card/card';
   selector: 'app-events',
   imports: [UpperCasePipe, Card],
   templateUrl: './events.html',
-  styleUrl: './events.css',
+  styleUrls: ['./events.css', '../../../../../../src/shared/css/title.css'],
 })
 export class Events {
   title = 'мероприятия и проекты';

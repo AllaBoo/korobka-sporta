@@ -1,7 +1,7 @@
 .events {
   background-color: var(--color-bg-light);
   box-sizing: border-box;
-  padding: var(--padding-vertical) var(--padding-horisontal);
+  padding: 60px var(--padding-horisontal);
   position: relative;
   background-image:
     url("/images/decor/events/donut.svg"),
@@ -16,12 +16,6 @@
     0 100%,
     100% 101%;
   background-repeat: no-repeat, no-repeat;
-}
-.events__title {
-  font-family: Russo One;
-  font-weight: bold;
-  font-size: 36px;
-  line-height: 130%;
 }
 .events__container {
   display: grid;
@@ -45,7 +39,7 @@
   .events {
     background-position:
       -10px 35%,
-      -20px 102%,
+      -0px 100%,
       100% 101%;
   }
 }

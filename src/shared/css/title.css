@@ -1,0 +1,29 @@
+.title {
+  font-family: Russo One;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 130%;
+}
+.title_centered {
+  text-align: center;
+}
+.title_underlined {
+  text-decoration: underline;
+  text-underline-offset: 16px;
+  line-height: 2;
+}
+@media (max-width: 768px) {
+  .title {
+    font-size: 28px;
+  }
+  .title_underlined {
+    text-underline-offset: 8px;
+    line-height: 1.5;
+  }
+}
+
+@media (max-width: 576px) {
+  .title {
+    font-size: 24px;
+  }
+}
