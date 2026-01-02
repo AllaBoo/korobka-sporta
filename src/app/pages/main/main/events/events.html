@@ -1,6 +1,6 @@
 @if (events.length > 0) {
   <section class="events" id="events">
-    <h2 class="events__title">{{ title | uppercase }}</h2>
+    <h2 class="title">{{ title | uppercase }}</h2>
     <div class="events__container">
       @for (event of events; track event.name) {
         <app-card [event]="event"></app-card>

@@ -1,3 +1,6 @@
 .block {
   display: block;
 }
+.light {
+  color: var(--color-lightest);
+}
