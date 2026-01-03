@@ -39,7 +39,7 @@
   .events {
     background-position:
       -10px 35%,
-      -0px 100%,
+      0 100%,
       100% 101%;
   }
 }

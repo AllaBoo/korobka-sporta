@@ -4,3 +4,9 @@
 .light {
   color: var(--color-lightest);
 }
+.centered {
+  width: fit-content;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}

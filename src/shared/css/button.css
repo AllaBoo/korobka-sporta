@@ -36,13 +36,20 @@
 .button_full-wide {
   width: 100%;
 }
+.button_transparent {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+}
 @media (max-width: 768px) {
   .button {
     padding: 12px;
   }
-
   .button_full-wide-mobile {
     width: 100%;
     padding: 16px;
+  }
+  .button_transparent {
+    padding: 0;
   }
 }

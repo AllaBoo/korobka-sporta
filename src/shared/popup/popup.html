@@ -1,0 +1,34 @@
+<dialog class="popup" id="popup" popover>
+  <div class="popup__flex-container">
+    <div class="popup__content">
+      <button
+        class="button button_transparent popup__close"
+        popovertarget="popup"
+        popovertargetaction="hide"
+        aria-label="Закрыть"
+      >
+        <img
+          loading="lazy"
+          class="button button_transparent"
+          src="/images/icons/close-dark.svg"
+          alt="Закрыть"
+          width="19"
+          height="19"
+        />
+      </button>
+      <p class="title title_centered no-margin">{{ popupContent.title }}</p>
+      <div class="popup__conteiner">
+        <img
+          class="popup__media"
+          loading="lazy"
+          src="{{ popupContent.image }}"
+          alt="'Фотография ' + popupContent.title + '.'"
+        />
+        <div class="popup__info">
+          <p class="popup__description">{{ popupContent.description }}</p>
+          <app-cta class="centered"></app-cta>
+        </div>
+      </div>
+    </div>
+  </div>
+</dialog>

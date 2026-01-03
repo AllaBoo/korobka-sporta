@@ -3,10 +3,11 @@ import { Header } from '../../../../shared/header/header';
 import { Hero } from './hero/hero';
 import { Events } from './events/events';
 import { Overview } from './overview/overview';
+import { Popup } from '../../../../shared/popup/popup';
 
 @Component({
   selector: 'app-main',
-  imports: [Header, Hero, Events, Overview],
+  imports: [Header, Hero, Events, Overview, Popup],
   templateUrl: './main.html',
   styleUrl: './main.css',
 })

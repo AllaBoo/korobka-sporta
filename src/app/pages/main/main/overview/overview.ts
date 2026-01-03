@@ -7,11 +7,7 @@ import { CTA } from '../../../../../../src/shared/cta/cta';
   selector: 'app-overview',
   imports: [UpperCasePipe, CTA],
   templateUrl: './overview.html',
-  styleUrls: [
-    './overview.css',
-    '../../../../../../src/shared/css/title.css',
-    '../../../../../../src/shared/css/mixin.css',
-  ],
+  styleUrl: './overview.css',
 })
 export class Overview {
   title = 'Кроссфит в Пушкино';

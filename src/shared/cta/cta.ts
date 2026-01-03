@@ -5,7 +5,7 @@ import { ICTA } from '../interface';
   selector: 'app-cta',
   imports: [],
   templateUrl: './cta.html',
-  styleUrls: ['./cta.css', '../css/button.css'],
+  styleUrl: './cta.css',
 })
 export class CTA {
   @Input() theme: 'light' | 'accent' = 'accent';
