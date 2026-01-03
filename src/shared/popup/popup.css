@@ -1,0 +1,72 @@
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 10;
+  min-height: 100vh;
+}
+.popup__flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.popup__content {
+  max-width: min(80%, 800px);
+  max-height: 65vh;
+  position: relative;
+  background-color: var(--color-bg-light);
+  color: var(--color-darkest);
+  box-sizing: border-box;
+  padding: 40px 40px 60px;
+  font-family: "Tilda Sans VF";
+  border-radius: 16px;
+  overflow: auto;
+  align-self: center;
+}
+.popup__close {
+  position: absolute;
+  top: 19px;
+  right: 19px;
+}
+.popup__conteiner {
+  display: flex;
+  justify-content: space-between;
+  gap: 28px;
+  margin-top: 26px;
+}
+.popup__media {
+  width: 30%;
+  object-fit: cover;
+  object-position: center;
+}
+.popup__description {
+  margin: 0 0 1rem;
+}
+@media (max-width: 992px) {
+  .popup__content {
+    max-width: 95%;
+    max-height: 90vh;
+    padding: 20px 20px 36px;
+  }
+}
+
+@media (max-width: 640px) {
+  .popup__content {
+    transform: translateY(0);
+    margin-top: calc(var(--header-height) + 16px);
+    max-height: 70vh;
+    overflow: auto;
+  }
+  .popup__conteiner {
+    flex-wrap: wrap;
+  }
+  .popup__media {
+    display: block;
+    order: 3;
+    width: 100%;
+  }
+}

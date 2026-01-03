@@ -2,13 +2,16 @@
   <div class="card" itemscope itemtype="http://schema.org/Event">
     <a href="{{ event.link }}" target="_blank">
       <img
+        loading="lazy"
         class="card__image"
         [src]="event.image"
         [alt]="'Фотографии мероприятия ' + event.name + '.'"
+        [style.object-position]="event.imagePosition"
       />
     </a>
     <figure class="card__date">
       <img
+        loading="lazy"
         src="/images/icons/calendar-white.svg"
         width="12"
         height="12"
@@ -26,12 +29,18 @@
       <p class="card__description trankate" itemprop="description">
         {{ event.description }}
       </p>
-      <a
-        href="{{ event.link }}"
-        target="_blank"
+      <button
+        popovertarget="popup"
+        popovertargetaction="show"
+        (click)="eventsService.selectEvent(event.id)"
+        aria-haspopup="dialog"
+        aria-expanded="false"
+        aria-controls="popup"
+        aria-label="Открыть описание мероприятия"
         class="button button_accent button_full-wide card__cta"
-        >{{ event.CTA }}</a
       >
+        {{ event.CTA }}
+      </button>
     </div>
   </div>
 }

@@ -7,7 +7,7 @@ import { CTA } from '../../../../../../src/shared/cta/cta';
   selector: 'app-hero',
   imports: [UpperCasePipe, CTA],
   templateUrl: './hero.html',
-  styleUrls: ['./hero.css', '../../../../../../src/shared/css/mixin.css'],
+  styleUrl: './hero.css',
 })
 export class Hero {
   title = 'Зал\u00A0функционального тренинга';
