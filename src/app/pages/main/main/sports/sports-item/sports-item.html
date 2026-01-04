@@ -1,0 +1,26 @@
+<button
+  popovertarget="popup"
+  popovertargetaction="show"
+  aria-haspopup="dialog"
+  aria-expanded="false"
+  aria-controls="popup"
+  aria-label="Открыть описание направления {{ sport.title }}."
+  class="button button_transparent sport"
+  (click)="selectSport(sport.title)"
+>
+  <figure class="no-margin">
+    <picture>
+      <source
+        type="image/webp"
+        srcset="{{ sport.image.replace('.jpg', '.webp') }}"
+      />
+      <img
+        loading="lazy"
+        src="{{ sport.image }}"
+        alt="Фотография {{ sport.title }}."
+        class="sport__image"
+      />
+    </picture>
+    <figcaption class="sport__title">{{ sport.title }}</figcaption>
+  </figure>
+</button>

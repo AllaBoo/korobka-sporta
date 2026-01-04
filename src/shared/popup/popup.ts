@@ -1,6 +1,7 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { CTA } from '../cta/cta';
 import { Events as EventsService } from '../../app/services/events';
+import { Sports as SportsService } from '../../app/services/sports';
 
 @Component({
   selector: 'app-popup',
@@ -10,6 +11,7 @@ import { Events as EventsService } from '../../app/services/events';
 })
 export class Popup implements OnInit {
   private eventsService = inject(EventsService);
+  private sportsService = inject(SportsService);
   public popupContent = {
     title: '',
     description: '',
@@ -17,7 +19,6 @@ export class Popup implements OnInit {
   };
   ngOnInit() {
     this.eventsService.selectedEvent$.subscribe((data) => {
-      console.log('popup: ' + data);
       if (data) {
         this.popupContent = {
           title: data.name,
@@ -26,5 +27,19 @@ export class Popup implements OnInit {
         };
       }
     });
+
+    this.sportsService.selectedSport$.subscribe((data) => {
+      if (data) {
+        this.popupContent = {
+          title: data.title,
+          description: data.description,
+          image: data.image,
+        };
+      }
+    });
+  }
+  deselect(): void {
+    this.sportsService.deselectSport();
+    this.eventsService.deselectEvent();
   }
 }

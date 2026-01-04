@@ -1,0 +1,11 @@
+<section class="sports" id="sports">
+  <h2 class="title">{{ title | uppercase }}</h2>
+  <div class="sports__container">
+    @for (sport of sports; track sport) {
+      <app-sports-item
+        [sport]="sport"
+        (sportSelect)="selectSport($event)"
+      ></app-sports-item>
+    }
+  </div>
+</section>
