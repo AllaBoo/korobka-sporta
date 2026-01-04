@@ -8,7 +8,7 @@
     url("/images/decor/overview/kettlebell.svg"),
     url("/images/decor/overview/dumbbell.svg"),
     url("/images/decor/overview/donut-left.svg"),
-    url("/images/decor/overview/box-right.svg"),
+    url("/images/decor/box-skew-left.svg"),
     url("/images/decor/overview/donut-right.svg");
   background-size:
     92px 92px,
@@ -46,7 +46,7 @@
   max-width: 900px;
 }
 .overview__container::before {
-  content: url("/images/decor/overview/box-bottom.svg");
+  content: url("/images/decor/box-skew-left.svg");
   position: absolute;
   bottom: 0;
   left: -116px;

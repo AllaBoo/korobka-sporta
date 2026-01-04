@@ -13,3 +13,9 @@ export interface ICTA {
   link: string;
   label: string;
 }
+export interface ISport {
+  title: string;
+  description: string;
+  image: string;
+  level: string;
+}

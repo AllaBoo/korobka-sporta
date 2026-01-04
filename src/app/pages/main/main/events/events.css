@@ -15,7 +15,7 @@
     -10px 35%,
     0 100%,
     100% 101%;
-  background-repeat: no-repeat, no-repeat;
+  background-repeat: no-repeat;
 }
 .events__container {
   display: grid;
