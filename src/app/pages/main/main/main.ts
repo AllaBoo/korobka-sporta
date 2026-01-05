@@ -5,10 +5,11 @@ import { Events } from './events/events';
 import { Overview } from './overview/overview';
 import { Sports } from './sports/sports';
 import { Popup } from '../../../../shared/popup/popup';
+import { Advantages } from './advantages/advantages';
 
 @Component({
   selector: 'app-main',
-  imports: [Header, Hero, Events, Overview, Popup, Sports],
+  imports: [Header, Hero, Events, Overview, Popup, Sports, Advantages],
   templateUrl: './main.html',
   styleUrl: './main.css',
 })

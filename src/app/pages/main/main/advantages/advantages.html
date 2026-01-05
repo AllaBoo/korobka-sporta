@@ -1,0 +1,8 @@
+<section class="advantages">
+    <h2 class="title title_centered">{{ title | uppercase }}</h2>
+    <ul class="advantages__container list-seo">
+        @for (advantage of advantages; track advantage) {
+        <li class="advantage__text">{{ advantage }}</li>
+        }
+    </ul>
+</section>

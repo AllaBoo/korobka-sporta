@@ -4,8 +4,9 @@ import {
   Renderer2,
   HostListener,
   inject,
+  PLATFORM_ID,
 } from '@angular/core';
-import { DOCUMENT } from '@angular/common';
+import { DOCUMENT, isPlatformBrowser } from '@angular/common';
 
 import { Logo } from '../logo/logo';
 import { SocialMedia } from '../social-media/social-media';
@@ -21,6 +22,7 @@ import { appURL } from '../constants';
 export class Header implements OnInit {
   private renderer2 = inject(Renderer2);
   private document = inject(DOCUMENT);
+  private platformId = inject(PLATFORM_ID);
   public nav = [
     {
       name: 'Эвенты',
@@ -29,10 +31,6 @@ export class Header implements OnInit {
     {
       name: 'Направления',
       anchor: 'sports',
-    },
-    {
-      name: 'Мерч',
-      anchor: 'merch',
     },
     {
       name: 'Расписание',
@@ -47,6 +45,11 @@ export class Header implements OnInit {
     this.document.documentElement.clientWidth < 1024 ? false : true;
 
   ngOnInit(): void {
+    if (isPlatformBrowser(this.platformId)) {
+      this.addMicrodata();
+    }
+  }
+  addMicrodata(){
     const script = this.renderer2.createElement('script') as HTMLScriptElement;
     const names = String(this.nav.map((section) => '"' + section.name + '"'));
     const anchors = String(
