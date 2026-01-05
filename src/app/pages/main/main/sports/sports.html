@@ -1,10 +1,11 @@
 <section class="sports" id="sports">
   <h2 class="title">{{ title | uppercase }}</h2>
   <div class="sports__container">
-    @for (sport of sports; track sport) {
+    @for (sport of sports; track sport; let index = $index) {
       <app-sports-item
         [sport]="sport"
         (sportSelect)="selectSport($event)"
+        class="sports__item"
       ></app-sports-item>
     }
   </div>
