@@ -1,14 +1,11 @@
 .sport {
   position: relative;
   z-index: 3;
-}
-.sport__image {
+  background-size: cover;
+  background-position: bottom center;
+  background-repeat: no-repeat;
   width: 100%;
-  min-height: 162px;
-  aspect-ratio: 16/9;
-  object-fit: cover;
-  object-position: bottom;
-  border-radius: 16px;
+  height: 220px;
 }
 .sport__title {
   font-size: 1rem;
@@ -26,19 +23,19 @@
   border-radius: 20px;
 }
 @media (max-width: 1024px) {
-  .sport__image {
-    aspect-ratio: 4/3;
+  .sport {
+    height: 162px;
   }
 }
 @media (max-width: 998px) {
   .sport__title {
     font-size: 14px;
   }
-}
-@media (max-width: 640px) {
-  .sport__image {
-    aspect-ratio: 16/9;
+  .sport {
+    height: 180px;
   }
+}
+@media (max-width: 694px) {
   .sport__title {
     font-size: 18px;
     padding: 2px 16px 4px;
@@ -46,6 +43,8 @@
     left: 20px;
   }
   .sport {
+    height: auto;
+    aspect-ratio: 16/9;
     margin-bottom: 2rem;
   }
 }

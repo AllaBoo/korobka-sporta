@@ -20,6 +20,10 @@
     50% 95%;
   background-repeat: no-repeat;
 }
+.sports__item {
+  border-radius: 16px;
+  margin-bottom: 20px;
+}
 .sports__container {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -59,6 +63,13 @@
   }
 }
 @media (max-width: 998px) {
+  .sports {
+    background-position:
+      70% 40px,
+      -12px 45%,
+      105% 60%,
+      50% 98%;
+  }
   .sports__container > *:nth-child(-n + 2) {
     grid-column: span 6;
   }
@@ -68,15 +79,8 @@
   .sports__container > *:nth-child(n + 6):nth-child(-n + 7) {
     grid-column: span 6;
   }
-  .sports {
-    background-position:
-      70% 40px,
-      -12px 45%,
-      105% 60%,
-      50% 98%;
-  }
 }
-@media (max-width: 640px) {
+@media (max-width: 694px) {
   .sports__container {
     display: block;
   }
@@ -86,8 +90,6 @@
       -12px 45%,
       105% 60%,
       50% 99%;
-  }
-  .sports {
     background-image:
       url("/images/decor/sports/dumbbell.svg"),
       url("/images/decor/sports/kettlebell-bg.svg"),
