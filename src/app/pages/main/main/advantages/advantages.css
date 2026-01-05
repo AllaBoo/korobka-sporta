@@ -1,0 +1,44 @@
+.advantages {
+    box-sizing: border-box;
+    padding: var(--padding-vertical) var(--padding-horisontal);
+    background-color: var(--color-accent);
+    color: var(--color-lightest);
+}
+
+.advantages__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    align-items: start;
+}
+
+.advantage__text {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.3;
+    padding-left: 42px;
+    margin: 0;
+    position: relative;
+    height: fit-content;
+    font-family: Tilda Sans VF;
+}
+.advantage__text::before {
+    content: url('/images/icons/fire.svg');
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+@media (max-width: 800px) {
+    .advantages__container {
+        display: block;
+    }
+    .advantage__text  {
+        margin-bottom: 1rem;
+    }
+    .advantage__text::before { 
+        top: 0;
+        transform: scale(.75);
+    }
+
+}
