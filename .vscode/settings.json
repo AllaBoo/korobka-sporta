@@ -1,13 +1,22 @@
 {
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
-
   "files.autoSave": "off",
   "files.autoSaveDelay": 3000,
-
   "css.validate": false,
   "scss.validate": false,
-  "stylelint.validate": ["css", "scss"],
-
-  "typescript.tsdk": "node_modules/typescript/lib"
+  "stylelint.validate": [
+    "css",
+    "scss"
+  ],
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "[typescript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  }
 }

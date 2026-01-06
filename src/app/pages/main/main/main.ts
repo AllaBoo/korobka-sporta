@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { Header } from '../../../../shared/header/header';
 import { Hero } from './hero/hero';
 import { Events } from './events/events';
@@ -6,12 +6,14 @@ import { Overview } from './overview/overview';
 import { Sports } from './sports/sports';
 import { Popup } from '../../../../shared/popup/popup';
 import { Advantages } from './advantages/advantages';
+import { Photos } from './photos/photos';
 
 @Component({
   selector: 'app-main',
-  imports: [Header, Hero, Events, Overview, Popup, Sports, Advantages],
+  imports: [Header, Hero, Events, Overview, Popup, Sports, Advantages, Photos],
   templateUrl: './main.html',
   styleUrl: './main.css',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class Main {
   protected readonly titles = ['Зал\u00A0функционального тренинга'];
