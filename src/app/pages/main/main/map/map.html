@@ -1,0 +1,12 @@
+<section class="map" id="map">
+  <div class="map__container">
+    <h2 class="title map__title">{{ title | uppercase }}</h2>
+    <app-cta [theme]="'light'" [class]="'button_wide'"></app-cta>
+  </div>
+  <iframe
+    src="https://yandex.ru/map-widget/v1/?um=constructor%3A750bc00f2907aa82c5ad36da4b3bd91790f636f571281a2207355cb267b4c395&amp;source=constructor"
+    width="100%"
+    height="400"
+    frameborder="0"
+  ></iframe>
+</section>

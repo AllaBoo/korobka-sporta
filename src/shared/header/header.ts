@@ -11,7 +11,7 @@ import { DOCUMENT, isPlatformBrowser } from '@angular/common';
 import { Logo } from '../logo/logo';
 import { SocialMedia } from '../social-media/social-media';
 import { CTA } from '../cta/cta';
-import { appURL } from '../constants';
+import { appURL, appNav } from '../constants';
 
 @Component({
   selector: 'app-header',
@@ -23,24 +23,7 @@ export class Header implements OnInit {
   private renderer2 = inject(Renderer2);
   private document = inject(DOCUMENT);
   private platformId = inject(PLATFORM_ID);
-  public nav = [
-    {
-      name: 'Эвенты',
-      anchor: 'events',
-    },
-    {
-      name: 'Направления',
-      anchor: 'sports',
-    },
-    {
-      name: 'Расписание',
-      anchor: 'schedule',
-    },
-    {
-      name: 'Фото',
-      anchor: 'photos',
-    },
-  ];
+  public nav = appNav;
   public isMenuOpen =
     this.document.documentElement.clientWidth < 1024 ? false : true;
 
@@ -49,7 +32,7 @@ export class Header implements OnInit {
       this.addMicrodata();
     }
   }
-  addMicrodata(){
+  addMicrodata() {
     const script = this.renderer2.createElement('script') as HTMLScriptElement;
     const names = String(this.nav.map((section) => '"' + section.name + '"'));
     const anchors = String(

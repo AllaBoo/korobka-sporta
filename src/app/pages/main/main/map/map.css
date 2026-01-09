@@ -1,0 +1,12 @@
+.map {
+  background-color: var(--color-accent);
+  color: var(--color-lightest);
+}
+.map__container {
+  box-sizing: border-box;
+  padding: 0 var(--padding-horisontal);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
