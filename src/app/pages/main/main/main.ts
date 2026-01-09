@@ -6,10 +6,11 @@ import { Overview } from './overview/overview';
 import { Sports } from './sports/sports';
 import { Popup } from '../../../../shared/popup/popup';
 import { Advantages } from './advantages/advantages';
+import { Photos } from './photos/photos';
 
 @Component({
   selector: 'app-main',
-  imports: [Header, Hero, Events, Overview, Popup, Sports, Advantages],
+  imports: [Header, Hero, Events, Overview, Popup, Sports, Advantages, Photos],
   templateUrl: './main.html',
   styleUrl: './main.css',
 })

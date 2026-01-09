@@ -1,0 +1,80 @@
+<section class="photos">
+  <h2 class="title title_centered">{{ title | uppercase }}</h2>
+  @if (photos.length > 0) {
+    <div class="photos__carousel">
+      <button
+        (click)="previousPhoto()"
+        aria-label="К предыдущему фото."
+        class="photos__button photos__button_previous"
+      >
+        <img
+          src="/images/icons/chevron-white.svg"
+          width="12"
+          height="19"
+          loading="lazy"
+          alt="К предыдущему фото."
+          class="photos__icon"
+        />
+      </button>
+
+      <picture class="photo photo_previous">
+        <source
+          [srcset]="
+            photos.at(photoIndexes().previous)?.src?.replace('.jpg', '.webp')
+          "
+          type="image/webp"
+        />
+        <img
+          class="photo__image"
+          loading="lazy"
+          [src]="photos.at(photoIndexes().previous)?.src"
+          [alt]="photos.at(photoIndexes().previous)?.alt"
+        />
+      </picture>
+
+      <picture class="photo photo_active">
+        <source
+          [srcset]="
+            photos.at(photoIndexes().active)?.src?.replace('.jpg', '.webp')
+          "
+          type="image/webp"
+        />
+        <img
+          class="photo__image"
+          loading="lazy"
+          [src]="photos.at(photoIndexes().active)?.src"
+          [alt]="photos.at(photoIndexes().active)?.alt"
+        />
+      </picture>
+
+      <picture class="photo photo_next">
+        <source
+          [srcset]="
+            photos.at(photoIndexes().next)?.src?.replace('.jpg', '.webp')
+          "
+          type="image/webp"
+        />
+        <img
+          class="photo__image"
+          loading="lazy"
+          [src]="photos.at(photoIndexes().next)?.src"
+          [alt]="photos.at(photoIndexes().next)?.alt"
+        />
+      </picture>
+
+      <button
+        (click)="nextPhoto()"
+        aria-label="К следующему фото."
+        class="photos__button photos__button_next"
+      >
+        <img
+          src="/images/icons/chevron-white.svg"
+          width="12"
+          height="19"
+          loading="lazy"
+          alt="К предыдущему фото."
+        />
+      </button>
+    </div>
+  }
+</section>
