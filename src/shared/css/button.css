@@ -11,30 +11,29 @@
   width: fit-content;
   font-family: Tilda Sans;
 }
-
 .button:hover {
   cursor: pointer;
   opacity: 0.9;
 }
-
 .button_light {
   background-color: var(--color-lightest);
   color: var(--color-accent);
   border: none;
 }
-
 .button_accent {
   color: var(--color-lightest);
   background-color: var(--color-accent);
   border: none;
 }
-
 .button:disabled {
   opacity: 0.85;
   cursor: not-allowed;
 }
 .button_full-wide {
   width: 100%;
+}
+.button_wide {
+  min-width: 180px;
 }
 .button_transparent {
   background-color: transparent;

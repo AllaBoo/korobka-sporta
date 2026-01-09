@@ -1,0 +1,35 @@
+<footer class="footer">
+  <div class="footer__container">
+    <div class="footer__column">
+      <app-logo [theme]="'light'"></app-logo>
+      <app-social-media [theme]="'light'"></app-social-media>
+    </div>
+    <div>
+      <p class="footer__title">Меню</p>
+      <ul class="list-seo no-margin">
+        @for (item of nav; track item.anchor) {
+          <li class="mb">
+            <a href="#{{ item.anchor }}" target="_self" class="link-text">
+              {{ item.name }}
+            </a>
+          </li>
+        }
+      </ul>
+    </div>
+    <address class="footer__address">
+      <p class="footer__title">Контакты</p>
+      <p class="">{{ address }}</p>
+      <a href="mailto:{{ email }}" class="link-text">{{ email }}</a>
+    </address>
+  </div>
+  <hr class="footer__divider" />
+  <div class="footer__legal">
+    <a href="" target="_blank" class="link-text">
+      Политика конфиденциальности
+    </a>
+    <p>&copy; {{ currentYear }} {{ appTitle }}. Все права защищены.</p>
+    <a href="" target="_blank" class="link-text">
+      Пользовательское соглашение
+    </a>
+  </div>
+</footer>
