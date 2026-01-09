@@ -1,6 +1,6 @@
 .advantages {
     box-sizing: border-box;
-    padding: var(--padding-vertical) var(--padding-horisontal);
+    padding: var(--padding-vertical) var(--padding-horisontal) 1rem;
     background-color: var(--color-accent);
     color: var(--color-lightest);
 }
@@ -22,6 +22,7 @@
     height: fit-content;
     font-family: Tilda Sans VF;
 }
+
 .advantage__text::before {
     content: url('/images/icons/fire.svg');
     position: absolute;
@@ -29,14 +30,17 @@
     top: 50%;
     transform: translateY(-50%);
 }
+
 @media (max-width: 800px) {
     .advantages__container {
         display: block;
     }
-    .advantage__text  {
+
+    .advantage__text {
         margin-bottom: 1rem;
     }
-    .advantage__text::before { 
+
+    .advantage__text::before {
         top: 0;
         transform: scale(.75);
     }
