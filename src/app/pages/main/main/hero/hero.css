@@ -16,7 +16,10 @@
   right: 0;
   left: 0;
   bottom: -50px;
-  background-image: url("/images/decor/bg-dekor.webp");
+  background-image: image-set(
+    url("/images/decor/bg-dekor.webp") type("image/webp"),
+    url("/images/decor/bg-dekor.png") type("image/png")
+  );
   background-repeat: repeat-x;
   background-size: 963px 159px;
   background-position: bottom;
