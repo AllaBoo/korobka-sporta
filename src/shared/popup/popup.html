@@ -21,6 +21,9 @@
         *ngTemplateOutlet="popupContent.title === '' ? lead : info"
       ></ng-container>
       <ng-template #lead>
+        <p class="title popup__title">
+          оставь заявку и получи бонус на первую неделю занятий
+        </p>
         <app-lead></app-lead>
       </ng-template>
       <ng-template #info>
