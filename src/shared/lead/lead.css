@@ -1,0 +1,107 @@
+.form {
+  width: 100%;
+  background-color: var(--color-lightest);
+  box-sizing: border-box;
+  padding: 20px 30px 30px;
+  border-radius: 20px;
+  max-width: 640px;
+  margin: 0 auto;
+}
+.form__label {
+  display: block;
+  margin-bottom: 1rem;
+  position: relative;
+}
+.form__label_row {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+.form__input {
+  border: none;
+  outline: 1px solid var(--color-accent);
+  border-radius: 8px;
+  box-sizing: border-box;
+  padding: 14px 16px;
+  color: var(--color-darkest);
+  margin-top: 0.5rem;
+  background-color: transparent;
+  font-family: Tilda Sans VF;
+  font-size: 18px;
+}
+.form__input:focus,
+.form__input:active {
+  outline: 2px solid var(--color-accent);
+}
+.form__input:hover {
+  opacity: 0.8;
+}
+input.ng-touched.ng-valid {
+  outline: 2px solid green;
+}
+input.ng-touched.ng-invalid {
+  outline: 2px solid red;
+}
+.form__input_captioned::placeholder {
+  opacity: 1;
+}
+.form__input_captioned:not(:placeholder-shown) {
+  padding: 22px 16px 6px 16px;
+}
+.form__caption {
+  font-size: 10px;
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  white-space: nowrap;
+  visibility: hidden;
+  opacity: 0;
+  transition:
+    visibility 0.3s,
+    opacity 0.3s linear;
+  color: var(--color-text-light);
+}
+.form__input_captioned:not(:placeholder-shown) + .form__caption {
+  visibility: visible;
+  opacity: 1;
+}
+.form__error {
+  color: red;
+  font-size: 12px;
+  min-height: 15px;
+  margin: 2px 0 4px;
+}
+.form__disclamer {
+  font-size: 14px;
+  color: rgba(11, 15, 16, 1);
+  margin: 0 0 10px;
+}
+.form__checkbox {
+  border: 1px solid var(--color-main);
+  position: relative;
+  margin: 0;
+  cursor: pointer;
+}
+.form__checkbox::after {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  width: 20px;
+  height: 20px;
+  display: block;
+  border: 1px solid var(--color-accent);
+  border-radius: 4px;
+  background-color: var(--color-lightest);
+}
+.form__checkbox:focus:after {
+  border-width: 2px;
+}
+.form__checkbox:checked::after {
+  content: url(/images/icons/check-in-square.svg);
+}
+.form__button:disabled {
+  background-color: var(--color-bg-light);
+  color: var(--color-accent);
+  cursor: not-allowed;
+}

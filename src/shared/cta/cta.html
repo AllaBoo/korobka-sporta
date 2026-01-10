@@ -1,7 +1,11 @@
-<a
+<button
   class="button button_{{ theme }} {{ class }}"
   aria-label="{{ CTAParams.label }}"
-  href="{{ CTAParams.link }}"
+  popovertarget="popup"
+  popovertargetaction="show"
+  aria-haspopup="dialog"
+  aria-expanded="false"
+  aria-controls="popup"
 >
   {{ CTAParams.text }}
-</a>
+</button>

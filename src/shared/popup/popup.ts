@@ -1,11 +1,14 @@
 import { Component, inject, OnInit } from '@angular/core';
+import { NgTemplateOutlet } from '@angular/common';
+
+import { Lead } from '../lead/lead';
 import { CTA } from '../cta/cta';
 import { Events as EventsService } from '../../app/services/events';
 import { Sports as SportsService } from '../../app/services/sports';
 
 @Component({
   selector: 'app-popup',
-  imports: [CTA],
+  imports: [CTA, Lead, NgTemplateOutlet],
   templateUrl: './popup.html',
   styleUrl: './popup.css',
 })
@@ -41,5 +44,6 @@ export class Popup implements OnInit {
   deselect(): void {
     this.sportsService.deselectSport();
     this.eventsService.deselectEvent();
+    this.popupContent.title = '';
   }
 }

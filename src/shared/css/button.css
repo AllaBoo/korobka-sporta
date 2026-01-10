@@ -10,6 +10,8 @@
   display: inline-block;
   width: fit-content;
   font-family: Tilda Sans;
+  position: relative;
+  z-index: 3;
 }
 .button:hover {
   cursor: pointer;
@@ -25,8 +27,11 @@
   background-color: var(--color-accent);
   border: none;
 }
+.buton_centered {
+  display: block;
+  margin: 0 auto;
+}
 .button:disabled {
-  opacity: 0.85;
   cursor: not-allowed;
 }
 .button_full-wide {

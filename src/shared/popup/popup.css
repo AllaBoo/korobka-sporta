@@ -17,12 +17,12 @@
 }
 .popup__content {
   max-width: min(80%, 800px);
-  max-height: 65vh;
+  max-height: max(65vh, 720px);
   position: relative;
   background-color: var(--color-bg-light);
   color: var(--color-darkest);
   box-sizing: border-box;
-  padding: 40px 40px 60px;
+  padding: 40px;
   font-family: "Tilda Sans VF";
   border-radius: 16px;
   overflow: auto;
@@ -38,6 +38,13 @@
   justify-content: space-between;
   gap: 28px;
   margin-top: 26px;
+}
+.popup__title {
+  font-size: 26px;
+  margin: 0 auto 28px;
+  text-transform: uppercase;
+  text-align: center;
+  max-width: 500px;
 }
 .popup__media {
   width: 30%;
