@@ -1,0 +1,61 @@
+<h2 class="title title_centered title_uppercase">
+  Oставь заявку и получи бонус на первую неделю занятий
+</h2>
+<form [formGroup]="leadForm" novalidate class="form">
+  <label class="form__label">
+    <input
+      class="form__input form__input_captioned full-wide"
+      name="name"
+      formControlName="name"
+      placeholder="Имя Фамилия"
+    />
+    <span class="form__caption">Имя Фамилия</span>
+  </label>
+  @if (leadForm.controls["name"].invalid && leadForm.controls["name"].touched) {
+    <p class="form__error">Не указано имя</p>
+  }
+  <label class="form__label">
+    <input
+      class="form__input form__input_captioned full-wide"
+      name="email"
+      formControlName="email"
+      placeholder="Email"
+    />
+  </label>
+  <span class="form__caption">Email</span>
+  @if (
+    leadForm.controls["email"].invalid && leadForm.controls["email"].touched
+  ) {
+    <p class="form__error">Некорректный email</p>
+  }
+
+  <label class="form__label">
+    <input
+      class="form__input form__input_captioned full-wide"
+      name="phone"
+      formControlName="phone"
+      placeholder="Телефон"
+    />
+    <span class="form__caption">Телефон</span>
+  </label>
+  @if (
+    leadForm.controls["phone"].invalid && leadForm.controls["phone"].touched
+  ) {
+    <p class="form__error">Некорректный номер телефона</p>
+  }
+  <label class="form__label form__label_row mt-big">
+    <input type="checkbox" class="form__checkbox" />
+    <span class="form__disclamer"
+      >Я согласен(на) с обработкой персональных данных в соответствии с
+      Политикой обработки персональных данных и принимаю условия
+      Пользовательского соглашения.</span
+    >
+  </label>
+
+  <button
+    [disabled]="leadForm.invalid"
+    class="button button_accent form__button buton_centered button_wide"
+  >
+    Отправить
+  </button>
+</form>

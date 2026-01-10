@@ -15,7 +15,9 @@
   text-underline-offset: 16px;
   line-height: 2;
 }
-
+.title_uppercase {
+  text-transform: uppercase;
+}
 @media (max-width: 768px) {
   .title {
     font-size: 28px;

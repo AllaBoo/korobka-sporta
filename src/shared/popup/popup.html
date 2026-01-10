@@ -17,19 +17,27 @@
           height="19"
         />
       </button>
-      <p class="title title_centered no-margin">{{ popupContent.title }}</p>
-      <div class="popup__conteiner">
-        <img
-          class="popup__media"
-          loading="lazy"
-          src="{{ popupContent.image }}"
-          alt="'Фотография ' + popupContent.title + '.'"
-        />
-        <div class="popup__info">
-          <p class="popup__description">{{ popupContent.description }}</p>
-          <app-cta class="centered"></app-cta>
+      <ng-container
+        *ngTemplateOutlet="popupContent.title === '' ? lead : info"
+      ></ng-container>
+      <ng-template #lead>
+        <app-lead></app-lead>
+      </ng-template>
+      <ng-template #info>
+        <p class="title title_centered no-margin">{{ popupContent.title }}</p>
+        <div class="popup__conteiner">
+          <img
+            class="popup__media"
+            loading="lazy"
+            src="{{ popupContent.image }}"
+            alt="'Фотография ' + popupContent.title + '.'"
+          />
+          <div class="popup__info">
+            <p class="popup__description">{{ popupContent.description }}</p>
+            <app-cta class="centered"></app-cta>
+          </div>
         </div>
-      </div>
+      </ng-template>
     </div>
   </div>
 </dialog>
