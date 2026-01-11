@@ -37,7 +37,15 @@
           />
           <div class="popup__info">
             <p class="popup__description">{{ popupContent.description }}</p>
-            <app-cta class="centered"></app-cta>
+            <a
+              href="{{ linkTelegram }}"
+              target="_blank"
+              title="Написать в Telegram для записи."
+              aria-label="Написать в Telegram для записи."
+              class="button button_accent button_full-wide popup__cta"
+            >
+              Записаться
+            </a>
           </div>
         </div>
       </ng-template>

@@ -1,15 +1,15 @@
 @if (event) {
-  <div class="card" itemscope itemtype="http://schema.org/Event">
+  <div class="event" itemscope itemtype="http://schema.org/Event">
     <a href="{{ event.link }}" target="_blank">
       <img
         loading="lazy"
-        class="card__image"
+        class="event__image"
         [src]="event.image"
         [alt]="'Фотографии мероприятия ' + event.name + '.'"
         [style.object-position]="event.imagePosition"
       />
     </a>
-    <figure class="card__date">
+    <figure class="event__date">
       <img
         loading="lazy"
         src="/images/icons/calendar-white.svg"
@@ -24,9 +24,9 @@
         </time>
       </figcaption>
     </figure>
-    <div class="card__content">
-      <h3 class="card__title trankate" itemprop="name">{{ event.name }}</h3>
-      <p class="card__description trankate" itemprop="description">
+    <div class="event__content">
+      <h3 class="event__title trankate" itemprop="name">{{ event.name }}</h3>
+      <p class="event__description trankate" itemprop="description">
         {{ event.description }}
       </p>
       <button
@@ -37,7 +37,7 @@
         aria-expanded="false"
         aria-controls="popup"
         aria-label="Открыть описание мероприятия"
-        class="button button_accent button_full-wide card__cta"
+        class="button button_accent button_full-wide event__cta"
       >
         {{ event.CTA }}
       </button>

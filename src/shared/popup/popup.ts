@@ -1,14 +1,14 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { NgTemplateOutlet } from '@angular/common';
 
+import { appSocialMedia } from '../constants';
 import { Lead } from '../lead/lead';
-import { CTA } from '../cta/cta';
 import { Events as EventsService } from '../../app/services/events';
 import { Sports as SportsService } from '../../app/services/sports';
 
 @Component({
   selector: 'app-popup',
-  imports: [CTA, Lead, NgTemplateOutlet],
+  imports: [Lead, NgTemplateOutlet],
   templateUrl: './popup.html',
   styleUrl: './popup.css',
 })
@@ -20,6 +20,7 @@ export class Popup implements OnInit {
     description: '',
     image: '',
   };
+  linkTelegram = appSocialMedia.find((item) => item.name === 'Telegram')?.link;
   ngOnInit() {
     this.eventsService.selectedEvent$.subscribe((data) => {
       if (data) {

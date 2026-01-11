@@ -1,11 +1,11 @@
 import { Component, inject } from '@angular/core';
 import { UpperCasePipe } from '@angular/common';
 import { Events as EventsService } from '../../../../services/events';
-import { Card } from '../../../../../../src/shared/card/card';
+import { EventsItem } from './events-item/events-item';
 
 @Component({
   selector: 'app-events',
-  imports: [UpperCasePipe, Card],
+  imports: [UpperCasePipe, EventsItem],
   templateUrl: './events.html',
   styleUrl: './events.css',
 })

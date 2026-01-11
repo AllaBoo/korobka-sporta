@@ -3,7 +3,7 @@
     <h2 class="title">{{ title | uppercase }}</h2>
     <div class="events__container">
       @for (event of events; track event.name) {
-        <app-card [event]="event"></app-card>
+        <app-events-item [event]="event"></app-events-item>
       }
     </div>
   </section>
