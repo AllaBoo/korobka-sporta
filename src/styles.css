@@ -62,6 +62,7 @@
   margin-right: 3rem;
 }
 
-section[id] {
+section[id],
+.main[id] {
   scroll-margin-top: var(--header-height);
 }

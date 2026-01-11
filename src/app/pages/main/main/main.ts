@@ -4,6 +4,7 @@ import {
   OnInit,
   inject,
   PLATFORM_ID,
+  HostListener,
 } from '@angular/core';
 import { DOCUMENT, isPlatformBrowser } from '@angular/common';
 
@@ -44,9 +45,15 @@ export class Main implements OnInit {
   ngOnInit(): void {
     if (isPlatformBrowser(this.platformId)) {
       this.loadExternalScript();
-      this.loadFonts();
     }
   }
+
+  @HostListener('document:DOMContentLoaded')
+  onDOMContentLoaded() {
+    if (!isPlatformBrowser(this.platformId)) return;
+    this.loadFonts();
+  }
+
   loadFonts() {
     const link = this.renderer2.createElement('link') as HTMLLinkElement;
     link.href = '/fonts/fonts.css';

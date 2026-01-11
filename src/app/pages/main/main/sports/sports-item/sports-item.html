@@ -6,11 +6,14 @@
   aria-label="Открыть описание направления {{ sport.title }}."
   class="button button_transparent sport"
   [style.background-image]="
-    'image-set(url(' +
-    sport.image +
-    ') type(\'image/jpeg\'), url(' +
+    'image-set(
+    url(' +
     sport.image.replace('.jpg', '.webp') +
-    ') type(\'image/webp\'))'
+    ') type(\'image/webp\'),
+    url(' +
+    sport.image +
+    ') type(\'image/jpeg\')
+    )'
   "
   (click)="selectSport(sport.title)"
 >
