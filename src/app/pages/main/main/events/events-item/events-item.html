@@ -1,13 +1,19 @@
 @if (event) {
   <div class="event" itemscope itemtype="http://schema.org/Event">
     <a href="{{ event.link }}" target="_blank">
-      <img
-        loading="lazy"
-        class="event__image"
-        [src]="event.image"
-        [alt]="'Фотографии мероприятия ' + event.name + '.'"
-        [style.object-position]="event.imagePosition"
-      />
+      <picture>
+        <source
+          srcset="{{ event.image.replace('.jpg', '.webp') }}"
+          type="image/webp"
+        />
+        <img
+          loading="lazy"
+          class="event__image"
+          [src]="event.image"
+          [alt]="'Фотографии мероприятия ' + event.name + '.'"
+          [style.object-position]="event.imagePosition"
+        />
+      </picture>
     </a>
     <figure class="event__date">
       <img
