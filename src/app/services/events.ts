@@ -26,7 +26,7 @@ export class Events {
       imagePosition: 'top',
       link: 'link/1',
       CTA: 'Смотреть',
-      date: '2025-13-12 17:00',
+      date: '2025-12-13 17:00',
       id: 1,
     },
     {

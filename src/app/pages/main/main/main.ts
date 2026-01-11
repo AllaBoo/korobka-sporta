@@ -44,7 +44,15 @@ export class Main implements OnInit {
   ngOnInit(): void {
     if (isPlatformBrowser(this.platformId)) {
       this.loadExternalScript();
+      this.loadFonts();
     }
+  }
+  loadFonts() {
+    const link = this.renderer2.createElement('link') as HTMLLinkElement;
+    link.href = '/fonts/fonts.css';
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    this.renderer2.appendChild(this.document.head, link);
   }
   loadExternalScript() {
     const scriptCRM = this.renderer2.createElement(

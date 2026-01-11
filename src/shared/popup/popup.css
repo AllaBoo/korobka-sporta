@@ -45,6 +45,7 @@
   text-transform: uppercase;
   text-align: center;
   max-width: 500px;
+  max-width: calc(100% - 30px);
 }
 .popup__media {
   width: 30%;
@@ -61,7 +62,6 @@
     padding: 20px 20px 36px;
   }
 }
-
 @media (max-width: 640px) {
   .popup__content {
     transform: translateY(0);
@@ -76,5 +76,14 @@
     display: block;
     order: 3;
     width: 100%;
+  }
+  .popup__title {
+    font-size: 20px;
+    margin: 0 auto 1rem;
+  }
+}
+@media (max-width: 500px) {
+  .popup__title {
+    font-size: 18px;
   }
 }
