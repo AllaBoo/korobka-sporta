@@ -105,3 +105,8 @@ input.ng-touched.ng-invalid {
   color: var(--color-accent);
   cursor: not-allowed;
 }
+@media (max-width: 640px) {
+  .form {
+    padding: 1rem;
+  }
+}
