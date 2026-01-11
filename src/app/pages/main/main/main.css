@@ -1,0 +1,5 @@
+.schedule {
+  background-color: var(--color-accent);
+  box-sizing: border-box;
+  padding: var(--padding-vertical) 0 0;
+}
