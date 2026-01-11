@@ -9,6 +9,7 @@ import { appTitle } from '../constants';
 })
 export class Logo {
   @Input() theme: 'light' | 'accent' = 'accent';
+  @Input() loading: 'lazy' | 'eager' = 'lazy';
   appTitle = appTitle;
   appTitleParts = appTitle.split(' ');
 }

@@ -10,4 +10,5 @@ import { appSocialMedia } from '../constants';
 export class SocialMedia {
   appSocialMedia = appSocialMedia;
   @Input() theme: 'light' | 'accent' = 'accent';
+  @Input() loading: 'lazy' | 'eager' = 'lazy';
 }

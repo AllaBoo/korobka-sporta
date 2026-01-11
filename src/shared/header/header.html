@@ -1,7 +1,7 @@
-<app-logo></app-logo>
-<a class="link-text sr-only sr-only-focusable" href="#main"
-  >Перейти к контенту</a
->
+<app-logo [loading]="'eager'"></app-logo>
+<a class="link-text sr-only sr-only-focusable" href="#main">
+  Перейти к контенту
+</a>
 <details class="menu" [open]="isMenuOpen">
   <summary class="menu__summary">Меню</summary>
   <nav
@@ -31,7 +31,10 @@
       }
     </ul>
     <div class="menu__block">
-      <app-social-media theme="accent"></app-social-media>
+      <app-social-media
+        [theme]="'accent'"
+        [loading]="'eager'"
+      ></app-social-media>
       <app-cta></app-cta>
     </div>
   </nav>
