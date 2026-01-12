@@ -7,6 +7,7 @@ import {
   HostListener,
 } from '@angular/core';
 import { DOCUMENT, isPlatformBrowser } from '@angular/common';
+import { timer } from 'rxjs';
 
 import { Header } from '../../../../shared/header/header';
 import { Hero } from './hero/hero';
@@ -44,7 +45,7 @@ export class Main implements OnInit {
 
   ngOnInit(): void {
     if (isPlatformBrowser(this.platformId)) {
-      this.loadExternalScript();
+      return;
     }
   }
 
@@ -52,6 +53,9 @@ export class Main implements OnInit {
   onDOMContentLoaded() {
     if (!isPlatformBrowser(this.platformId)) return;
     this.loadFonts();
+    timer(2000).subscribe(() => {
+      this.loadExternalScript();
+    });
   }
 
   loadFonts() {
@@ -62,6 +66,8 @@ export class Main implements OnInit {
     this.renderer2.appendChild(this.document.head, link);
   }
   loadExternalScript() {
+    console.log('loadExternalScript');
+
     const scriptCRM = this.renderer2.createElement(
       'script',
     ) as HTMLScriptElement;
@@ -83,5 +89,15 @@ export class Main implements OnInit {
       this.document.getElementById('schedule'),
       widget,
     );
+
+    const scriptMap = this.renderer2.createElement(
+      'script',
+    ) as HTMLScriptElement;
+    scriptMap.src =
+      'https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A750bc00f2907aa82c5ad36da4b3bd91790f636f571281a2207355cb267b4c395&amp;width=100%25&amp;height=600&amp;lang=ru_RU&amp;scroll=true';
+    scriptMap.async = true;
+    scriptMap.defer = true;
+
+    this.renderer2.appendChild(this.document.getElementById('map'), scriptMap);
   }
 }

@@ -66,3 +66,6 @@ section[id],
 .main[id] {
   scroll-margin-top: var(--header-height);
 }
+iframe {
+  min-height: 600px;
+}

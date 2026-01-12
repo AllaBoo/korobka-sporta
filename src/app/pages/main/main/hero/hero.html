@@ -13,21 +13,48 @@
     </p>
     <app-cta [theme]="'light'" [class]="'block mt-big'"></app-cta>
   </div>
-  <picture class="hero__media">
+  <picture class="hero__media" style="min-height: 255px">
     <source
-      media="(max-width: 1280px) and (min-width: 880px)"
+      media="(max-width: 380px)"
       type="image/webp"
-      srcset="/images/pages/main/hero-1-1.webp"
+      srcset="/images/pages/main/hero-horizontal-w380.webp"
+      sizes="100vw"
     />
     <source
-      media="(max-width: 1280px) and (min-width: 880px)"
+      media="(max-width: 380px)"
+      type="image/jpeg"
+      srcset="/images/pages/main/hero-horizontal-w380.jpg"
+      sizes="100vw"
+    />
+    <source
+      media="(max-width: 880px)"
+      type="image/webp"
+      srcset="/images/pages/main/hero-horizontal-w800.webp"
+      sizes="100vw"
+    />
+    <source
+      media="(max-width: 880px)"
+      type="image/jpeg"
+      srcset="/images/pages/main/hero-horizontal-w800.jpg"
+      sizes="100vw"
+    />
+    <source
+      media="(max-width: 1280px)"
+      type="image/webp"
+      srcset="/images/pages/main/hero-1-1.webp"
+      sizes="50vw"
+    />
+    <source
+      media="(max-width: 1280px)"
       type="image/jpeg"
       srcset="/images/pages/main/hero-1-1.jpg"
+      sizes="50vw"
     />
     <source
       media="(min-width: 1281px)"
       type="image/webp"
-      srcset="/images/pages/main/hero-horizontal.webp"
+      srcset="/images/pages/main/hero-horizontal-w800.webp"
+      sizes="50vw"
     />
     <img
       fetchpriority="high"
