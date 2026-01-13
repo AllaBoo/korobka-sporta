@@ -38,7 +38,6 @@ import { Footer } from '../../../../shared/footer/footer';
   styleUrl: './main.css',
 })
 export class Main implements OnInit {
-  protected readonly titles = ['Зал\u00A0функционального тренинга'];
   private renderer2 = inject(Renderer2);
   private document = inject(DOCUMENT);
   private readonly isBrowser = inject(IS_BROWSER);
