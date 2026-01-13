@@ -5,6 +5,7 @@ import {
   HostListener,
   inject,
   PLATFORM_ID,
+  signal,
 } from '@angular/core';
 import { DOCUMENT, isPlatformBrowser } from '@angular/common';
 
@@ -24,11 +25,11 @@ export class Header implements OnInit {
   private document = inject(DOCUMENT);
   private platformId = inject(PLATFORM_ID);
   public nav = appNav;
-  public isMenuOpen =
-    this.document.documentElement.clientWidth < 1024 ? false : true;
+  public isMenuOpen = signal(false);
 
   ngOnInit(): void {
     if (isPlatformBrowser(this.platformId)) {
+      this.isMenuOpen.set(window.innerWidth >= 1024);
       this.addMicrodata();
     }
   }
@@ -53,6 +54,13 @@ export class Header implements OnInit {
 
   @HostListener('window:resize')
   onResize() {
-    this.isMenuOpen = window.innerWidth < 1024 ? false : true;
+    this.isMenuOpen.set(window.innerWidth < 1024 ? false : true);
+  }
+
+  onToggle(event: Event) {
+    const target = event.target as HTMLDetailsElement | null;
+    if (target) {
+      this.isMenuOpen.set(target.open);
+    }
   }
 }
