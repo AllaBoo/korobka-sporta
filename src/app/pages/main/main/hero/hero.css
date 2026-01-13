@@ -12,7 +12,7 @@
 .hero::after {
   content: "";
   position: absolute;
-  top: 0;
+  height: 159px;
   right: 0;
   left: 0;
   bottom: -50px;
@@ -111,7 +111,7 @@
 @media (max-width: 960px) {
   .hero__info {
     padding-top: 80px;
-    padding-bottom: 140px;
+    padding-bottom: 130px;
   }
 
   .hero__title {
@@ -120,10 +120,8 @@
 
   .hero__subtitle {
     white-space: normal;
+    font-size: 16px;
   }
-}
-
-@media (max-width: 880px) {
   .hero {
     display: block;
     padding: 0;
@@ -153,7 +151,6 @@
     );
     background-size: 100% 100px;
   }
-}
 
 @media (max-width: 600px) {
   .hero__title {
