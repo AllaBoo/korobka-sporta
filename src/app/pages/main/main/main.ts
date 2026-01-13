@@ -3,10 +3,10 @@ import {
   Renderer2,
   OnInit,
   inject,
-  PLATFORM_ID,
   HostListener,
 } from '@angular/core';
-import { DOCUMENT, isPlatformBrowser } from '@angular/common';
+import { DOCUMENT } from '@angular/common';
+import { IS_BROWSER } from '../../../tokens/browser';
 import { timer } from 'rxjs';
 
 import { Header } from '../../../../shared/header/header';
@@ -41,17 +41,17 @@ export class Main implements OnInit {
   protected readonly titles = ['Зал\u00A0функционального тренинга'];
   private renderer2 = inject(Renderer2);
   private document = inject(DOCUMENT);
-  private platformId = inject(PLATFORM_ID);
+  private readonly isBrowser = inject(IS_BROWSER);
 
   ngOnInit(): void {
-    if (isPlatformBrowser(this.platformId)) {
+    if (this.isBrowser) {
       return;
     }
   }
 
   @HostListener('document:DOMContentLoaded')
   onDOMContentLoaded() {
-    if (!isPlatformBrowser(this.platformId)) return;
+    if (!this.isBrowser) return;
     this.loadFonts();
     timer(2000).subscribe(() => {
       this.loadExternalScript();
@@ -66,8 +66,6 @@ export class Main implements OnInit {
     this.renderer2.appendChild(this.document.head, link);
   }
   loadExternalScript() {
-    console.log('loadExternalScript');
-
     const scriptCRM = this.renderer2.createElement(
       'script',
     ) as HTMLScriptElement;
